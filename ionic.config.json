@@ -1,0 +1,8 @@
+{
+  "name": "youngforstem",
+  "app_id": "7103976a",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
