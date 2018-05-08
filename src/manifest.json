@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "Young For Stem App",
+  "short_name": "YoungForStem",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
