@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, TRANSLATIONS } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -22,12 +22,12 @@ export class SettingsPage {
   settingsReady = false;
 
   form: FormGroup;
-
+/*
   profileSettings = {
     page: 'profile',
     pageTitleKey: 'SETTINGS_PAGE_PROFILE'
   };
-
+*/
   page: string = 'main';
   pageTitleKey: string = 'SETTINGS_TITLE';
   pageTitle: string;
@@ -44,10 +44,27 @@ export class SettingsPage {
   _buildForm() {
     let group: any = {
       option1: [this.options.option1],
-      option2: [this.options.option2],
       option3: [this.options.option3]
     };
 
+    var lingua;
+    switch (this.options.option1) {
+    
+     case 'it':
+         lingua = 'it';
+         break;
+     case 'en':
+        lingua = 'en';
+        break;
+      default:
+        lingua = 'it';
+        break;
+    
+    }
+
+    this.translate.reloadLang(lingua);
+    this.translate.setDefaultLang(lingua);
+/*
     switch (this.page) {
       case 'main':
         break;
@@ -57,6 +74,7 @@ export class SettingsPage {
         };
         break;
     }
+  */
     this.form = this.formBuilder.group(group);
 
     // Watch the form for changes, and
