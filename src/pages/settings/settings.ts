@@ -1,6 +1,6 @@
 import { Component, TRANSLATIONS } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService, TranslateLoader } from '@ngx-translate/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Settings } from '../../providers';
@@ -64,6 +64,8 @@ export class SettingsPage {
 
     this.translate.reloadLang(lingua);
     this.translate.setDefaultLang(lingua);
+    this.translate.resetLang(lingua);
+    
 /*
     switch (this.page) {
       case 'main':

@@ -16,7 +16,7 @@ export class LoginPage {
   // sure to add it to the type
   account: { email: string, password: string } = {
     email: 'test@example.com',
-    password: 'test'
+    password: 'password'
   };
 
   // Our translated text strings
