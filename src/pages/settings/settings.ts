@@ -62,10 +62,8 @@ export class SettingsPage {
     
     }
 
-    this.translate.reloadLang(lingua);
     this.translate.setDefaultLang(lingua);
-    this.translate.resetLang(lingua);
-    
+   
 /*
     switch (this.page) {
       case 'main':
